@@ -1,0 +1,7 @@
+name: attack-move
+display-name: Attack Move
+type: module
+version: 1.0.1
+author: Monsterfish
+meta:
+  version: 1.0.1

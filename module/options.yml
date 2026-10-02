@@ -1,0 +1,38 @@
+options:
+- display: GroupBox
+  category: [Attack Move]
+  header: '{{waypoints_group}}'
+  text: '{{waypoints_group_descr}}'
+  hasHeader: true
+  children:
+  - url: attack-move.waypoints.always
+    name: attack-move-waypoints-always
+    text: '{{always}}'
+    tooltip: '{{always_tooltip}}'
+    display: Switch
+    contents:
+      type: boolean
+      value: true
+  - url: attack-move.waypoints.continue_move
+    name: attack-move-waypoints-continue-move
+    text: '{{continue_move}}'
+    tooltip: '{{continue_move_tooltip}}'
+    display: Switch
+    contents:
+      type: boolean
+      value: true
+
+- display: GroupBox
+  category: [Attack Move]
+  header: '{{stacking_group}}'
+  text: '{{stacking_group_descr}}'
+  hasHeader: true
+  children:
+  - url: attack-move.stacking.alt
+    name: attack-move-stacking-alt
+    text: '{{alt}}'
+    tooltip: '{{alt_tooltip}}'
+    display: Switch
+    contents:
+      type: boolean
+      value: true
