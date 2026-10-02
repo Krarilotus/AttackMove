@@ -4,3 +4,5 @@ bugfixes: Bugfixes
 continue_move: Aktuelles Ziel beim Anfügen von Wegpunkten behalten
 qol: Quality of Life
 waypoints_group: Wegpunktkorrekturen
+tags.behavior: Verhalten
+tags.bugfixes: Fehlerkorrekturen

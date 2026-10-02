@@ -4,3 +4,5 @@ bugfixes: Bugfixes
 continue_move: Keep the current destination when adding waypoints
 qol: Quality of Life
 waypoints_group: Waypoint fixes
+tags.behavior: Behavior
+tags.bugfixes: Bug fixes

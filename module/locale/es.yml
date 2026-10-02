@@ -4,3 +4,5 @@ bugfixes: Bugfixes
 continue_move: Mantener el destino al añadir puntos
 qol: Quality of Life
 waypoints_group: Correcciones de rutas
+tags.behavior: Comportamiento
+tags.bugfixes: Correcciones

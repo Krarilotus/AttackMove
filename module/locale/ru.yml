@@ -4,3 +4,5 @@ bugfixes: Bugfixes
 continue_move: Сохранять текущую цель при добавлении точек
 qol: Quality of Life
 waypoints_group: Исправления маршрутов
+tags.behavior: Поведение
+tags.bugfixes: Исправления

@@ -4,3 +4,5 @@ bugfixes: Bugfixes
 continue_move: Rota eklerken mevcut hedefi koru
 qol: Quality of Life
 waypoints_group: Rota düzeltmeleri
+tags.behavior: Davranış
+tags.bugfixes: Hata düzeltmeleri

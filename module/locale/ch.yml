@@ -4,3 +4,5 @@ bugfixes: Bugfixes
 continue_move: 添加路点时保留当前目的地
 qol: Quality of Life
 waypoints_group: 路点修复
+tags.behavior: 行为
+tags.bugfixes: 错误修复
