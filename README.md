@@ -45,3 +45,5 @@ PowerShell for fasm.dll; it reads the executables from the game folder named in 
   questions get "none", so the click is a move order.
 
 Every address is found by pattern scan or read from the instruction that uses it.
+
+See [the UCP integration review](docs/ucp-review.md) for ownership and remaining acceptance.

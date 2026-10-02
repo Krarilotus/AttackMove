@@ -1,7 +1,13 @@
 name: attack-move
 display-name: Attack Move
 type: module
-version: 1.0.1
+version: 1.0.2
 author: Monsterfish
 meta:
-  version: 1.0.1
+  version: 1.0.0
+game:
+- SHC==1.41
+- SHCE==1.41
+dependencies:
+  framework: '>=3.0.7'
+  frontend: '>=1.0.2'

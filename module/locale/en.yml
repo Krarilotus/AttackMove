@@ -1,30 +1,7 @@
-waypoints_group: Attack move (Shift waypoints)
-waypoints_group_descr: |
-  Select troops, hold Shift and click on the map: each click adds a waypoint and the troops
-  walk through them in order. On the way they follow their stance - archers and other ranged
-  troops stop and shoot at enemies that come close, melee troops go for them - and then carry
-  on. In the unmodified game this only works right after you select the troops.
-always: Shift waypoints work at any time
-always_tooltip: |
-  Shift-clicking works whenever troops are selected, also after they have already walked
-  somewhere. Without this, once the troops have finished a route (or were given a normal
-  move order), further Shift-clicks do nothing until you select them again.
-  If the troops are still walking a Shift route, a Shift-click adds to that route.
-  Otherwise the first Shift-click starts a new route from where they stand.
-continue_move: Shift-click after a normal move adds to it
-continue_move_tooltip: |
-  When troops are still walking to the spot of a normal move order and you Shift-click, that
-  spot becomes the first waypoint and the Shift-click the next one, so the troops keep going
-  instead of turning round. With this off, the Shift-click starts a new route from where they
-  stand.
-
-stacking_group: Moving with Alt
-stacking_group_descr: |
-  Moving troops onto other troops, yours or the enemy's.
-alt: Hold Alt to move onto troops instead of selecting or attacking them
-alt_tooltip: |
-  While troops are selected, hold Alt and click on one of your other troops or on an enemy:
-  the selected troops walk to that spot instead of the click selecting your troops standing
-  there or attacking that one enemy. Handy for stacking troops on top of each other and for
-  sending melee troops right into an enemy crowd, where they fight whatever is around them.
-  Without Alt, clicking works as usual.
+alt: Alt+click moves onto units
+always: Repair Shift waypoints
+bugfixes: Bugfixes
+continue_move: Keep the current destination when adding waypoints
+qol: Quality of Life
+stacking_group: Move onto units
+waypoints_group: Waypoint fixes

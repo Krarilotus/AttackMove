@@ -1,0 +1,19 @@
+meta:
+  version: 1.0.0
+config-sparse:
+  modules:
+    attack-move:
+      config:
+        waypoints:
+          always:
+            contents:
+              value: true
+          continue_move:
+            contents:
+              value: true
+        stacking:
+          alt:
+            contents:
+              value: true
+  plugins: {}
+  load-order: []
