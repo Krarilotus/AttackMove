@@ -3,5 +3,4 @@ always: Corriger les étapes avec Maj
 bugfixes: Bugfixes
 continue_move: Garder la destination en ajoutant des étapes
 qol: Quality of Life
-stacking_group: Rejoindre les unités
 waypoints_group: Corrections des étapes

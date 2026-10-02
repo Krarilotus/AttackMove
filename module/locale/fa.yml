@@ -3,5 +3,4 @@ always: اصلاح مسیر با Shift
 bugfixes: Bugfixes
 continue_move: حفظ مقصد فعلی هنگام افزودن مسیر
 qol: Quality of Life
-stacking_group: حرکت به جای واحدها
 waypoints_group: اصلاح مسیرها

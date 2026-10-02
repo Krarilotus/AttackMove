@@ -3,5 +3,4 @@ always: 修复 Shift 路点
 bugfixes: Bugfixes
 continue_move: 添加路点时保留当前目的地
 qol: Quality of Life
-stacking_group: 移动到单位位置
 waypoints_group: 路点修复

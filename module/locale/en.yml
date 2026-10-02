@@ -3,5 +3,4 @@ always: Repair Shift waypoints
 bugfixes: Bugfixes
 continue_move: Keep the current destination when adding waypoints
 qol: Quality of Life
-stacking_group: Move onto units
 waypoints_group: Waypoint fixes

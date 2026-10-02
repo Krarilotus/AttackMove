@@ -3,5 +3,4 @@ always: Shift-Wegpunkte korrigieren
 bugfixes: Bugfixes
 continue_move: Aktuelles Ziel beim Anfügen von Wegpunkten behalten
 qol: Quality of Life
-stacking_group: Auf Einheiten bewegen
 waypoints_group: Wegpunktkorrekturen

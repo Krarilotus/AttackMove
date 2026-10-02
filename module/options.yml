@@ -19,18 +19,14 @@ options:
     contents:
       type: boolean
       value: true
-- display: GroupBox
+- url: attack-move.stacking.alt
+  name: attack-move-stacking-alt
+  text: '{{alt}}'
+  display: Switch
+  contents:
+    type: boolean
+    value: true
   category:
   - '{{qol}}'
-  header: '{{stacking_group}}'
-  hasHeader: true
-  children:
-  - url: attack-move.stacking.alt
-    name: attack-move-stacking-alt
-    text: '{{alt}}'
-    display: Switch
-    contents:
-      type: boolean
-      value: true
 meta:
   version: 1.0.0

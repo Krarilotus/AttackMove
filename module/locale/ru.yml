@@ -3,5 +3,4 @@ always: Исправить маршрут с Shift
 bugfixes: Bugfixes
 continue_move: Сохранять текущую цель при добавлении точек
 qol: Quality of Life
-stacking_group: Движение на место юнитов
 waypoints_group: Исправления маршрутов
