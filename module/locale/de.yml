@@ -1,8 +1,10 @@
 alt: Alt+Klick bewegt auf Einheiten
+alt_details: Standardmäßig an.
 always: Shift-Wegpunkte korrigieren
-bugfixes: Bugfixes
+always_details: Standardmäßig an.
+bugfixes: Fehlerbehebungen
 continue_move: Aktuelles Ziel beim Anfügen von Wegpunkten behalten
-qol: Quality of Life
-waypoints_group: Wegpunktkorrekturen
+continue_move_details: Standardmäßig an.
+qol: Komfort
 tags.behavior: Verhalten
 tags.bugfixes: Fehlerkorrekturen

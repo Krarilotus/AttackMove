@@ -1,8 +1,10 @@
 alt: Alt+clic pour rejoindre une unité
+alt_details: Activé par défaut.
 always: Corriger les étapes avec Maj
-bugfixes: Bugfixes
+always_details: Activé par défaut.
+bugfixes: Corrections de bugs
 continue_move: Garder la destination en ajoutant des étapes
-qol: Quality of Life
-waypoints_group: Corrections des étapes
+continue_move_details: Activé par défaut.
+qol: Confort
 tags.behavior: Comportement
 tags.bugfixes: Corrections

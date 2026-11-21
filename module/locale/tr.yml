@@ -1,8 +1,10 @@
 alt: Alt+tık ile birimlerin üzerine git
+alt_details: Varsayılan olarak açık.
 always: Shift rotalarını düzelt
-bugfixes: Bugfixes
+always_details: Varsayılan olarak açık.
+bugfixes: Hata düzeltmeleri
 continue_move: Rota eklerken mevcut hedefi koru
-qol: Quality of Life
-waypoints_group: Rota düzeltmeleri
+continue_move_details: Varsayılan olarak açık.
+qol: Kullanım kolaylığı
 tags.behavior: Davranış
 tags.bugfixes: Hata düzeltmeleri

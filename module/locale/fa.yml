@@ -1,8 +1,10 @@
 alt: Alt+کلیک برای حرکت به جای واحد
+alt_details: به‌طور پیش‌فرض روشن است.
 always: اصلاح مسیر با Shift
-bugfixes: Bugfixes
+always_details: به‌طور پیش‌فرض روشن است.
+bugfixes: رفع اشکال
 continue_move: حفظ مقصد فعلی هنگام افزودن مسیر
-qol: Quality of Life
-waypoints_group: اصلاح مسیرها
+continue_move_details: به‌طور پیش‌فرض روشن است.
+qol: بهبود تجربه بازی
 tags.behavior: رفتار
 tags.bugfixes: رفع اشکال

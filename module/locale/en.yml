@@ -1,8 +1,10 @@
 alt: Alt+click moves onto units
+alt_details: Enabled by default.
 always: Repair Shift waypoints
+always_details: Enabled by default.
 bugfixes: Bugfixes
 continue_move: Keep the current destination when adding waypoints
+continue_move_details: Enabled by default.
 qol: Quality of Life
-waypoints_group: Waypoint fixes
 tags.behavior: Behavior
 tags.bugfixes: Bug fixes

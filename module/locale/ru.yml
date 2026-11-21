@@ -1,8 +1,10 @@
 alt: Alt+щелчок для движения на место юнита
+alt_details: По умолчанию включено.
 always: Исправить маршрут с Shift
-bugfixes: Bugfixes
+always_details: По умолчанию включено.
+bugfixes: Исправления ошибок
 continue_move: Сохранять текущую цель при добавлении точек
-qol: Quality of Life
-waypoints_group: Исправления маршрутов
+continue_move_details: По умолчанию включено.
+qol: Удобство игры
 tags.behavior: Поведение
 tags.bugfixes: Исправления

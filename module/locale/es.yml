@@ -1,8 +1,10 @@
 alt: Alt+clic para moverse sobre unidades
+alt_details: Activado por defecto.
 always: Corregir rutas con Mayús
-bugfixes: Bugfixes
+always_details: Activado por defecto.
+bugfixes: Corrección de errores
 continue_move: Mantener el destino al añadir puntos
-qol: Quality of Life
-waypoints_group: Correcciones de rutas
+continue_move_details: Activado por defecto.
+qol: Calidad de vida
 tags.behavior: Comportamiento
 tags.bugfixes: Correcciones

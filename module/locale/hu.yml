@@ -1,8 +1,10 @@
 alt: 'Alt+kattintás: mozgás az egységre'
+alt_details: Alapértelmezésben be van kapcsolva.
 always: Shift-útvonal javítása
-bugfixes: Bugfixes
+always_details: Alapértelmezésben be van kapcsolva.
+bugfixes: Hibajavítások
 continue_move: Új útvonalpontnál maradjon a jelenlegi cél
-qol: Quality of Life
-waypoints_group: Útvonaljavítások
+continue_move_details: Alapértelmezésben be van kapcsolva.
+qol: Kényelmi funkciók
 tags.behavior: Viselkedés
 tags.bugfixes: Hibajavítások

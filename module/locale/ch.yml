@@ -1,8 +1,10 @@
 alt: Alt+点击移动到单位位置
+alt_details: 默认开启。
 always: 修复 Shift 路点
-bugfixes: Bugfixes
+always_details: 默认开启。
+bugfixes: 错误修复
 continue_move: 添加路点时保留当前目的地
-qol: Quality of Life
-waypoints_group: 路点修复
+continue_move_details: 默认开启。
+qol: 便利功能
 tags.behavior: 行为
 tags.bugfixes: 错误修复

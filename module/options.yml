@@ -1,32 +1,33 @@
 options:
-- display: GroupBox
+- url: attack-move.waypoints.always
+  name: attack-move-waypoints-always
+  text: '{{always_details}}'
+  display: UCP2Switch
+  contents:
+    type: boolean
+    value: true
+  header: '{{always}}'
   category:
   - '{{bugfixes}}'
-  header: '{{waypoints_group}}'
-  hasHeader: true
-  children:
-  - url: attack-move.waypoints.always
-    name: attack-move-waypoints-always
-    text: '{{always}}'
-    display: Switch
-    contents:
-      type: boolean
-      value: true
-  - url: attack-move.waypoints.continue_move
-    name: attack-move-waypoints-continue-move
-    text: '{{continue_move}}'
-    display: Switch
-    contents:
-      type: boolean
-      value: true
+- url: attack-move.waypoints.continue_move
+  name: attack-move-waypoints-continue-move
+  text: '{{continue_move_details}}'
+  display: UCP2Switch
+  contents:
+    type: boolean
+    value: true
+  header: '{{continue_move}}'
+  category:
+  - '{{qol}}'
 - url: attack-move.stacking.alt
   name: attack-move-stacking-alt
-  text: '{{alt}}'
-  display: Switch
+  text: '{{alt_details}}'
+  display: UCP2Switch
   contents:
     type: boolean
     value: true
   category:
   - '{{qol}}'
+  header: '{{alt}}'
 meta:
   version: 1.0.0
