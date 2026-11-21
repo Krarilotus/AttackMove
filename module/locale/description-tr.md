@@ -1,3 +1,3 @@
 # Attack Move
 
-Askerlerin rotayı doğru izlemesi için Shift+tık rotalarını düzeltir. Alt+tık ile askerler başka bir birimin konumuna taşınabilir.
+Birliklerin rotalarını güvenilir şekilde izlemesi için Shift+tık yol noktalarını düzeltir. Ayrıca Alt+tık ile birlikleri başka bir birimin konumuna hareket ettirmenizi sağlar.

@@ -1,10 +1,10 @@
-alt: Alt+clic pour rejoindre une unité
+alt: Alt+clic pour déplacer sur des unités
 alt_details: Activé par défaut.
-always: Corriger les étapes avec Maj
+always: Corriger les points de passage avec Maj
 always_details: Activé par défaut.
-bugfixes: Corrections de bugs
-continue_move: Garder la destination en ajoutant des étapes
+bugfixes: Corrections
+continue_move: Conserver la destination actuelle lors de l'ajout de points de passage
 continue_move_details: Activé par défaut.
-qol: Confort
+qol: Qualité de vie
 tags.behavior: Comportement
 tags.bugfixes: Corrections

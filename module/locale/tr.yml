@@ -1,10 +1,10 @@
-alt: Alt+tık ile birimlerin üzerine git
+alt: Alt+tık ile birimlerin üzerine hareket et
 alt_details: Varsayılan olarak açık.
-always: Shift rotalarını düzelt
+always: Shift yol noktalarını düzelt
 always_details: Varsayılan olarak açık.
 bugfixes: Hata düzeltmeleri
-continue_move: Rota eklerken mevcut hedefi koru
+continue_move: Yol noktası eklerken mevcut hedefi koru
 continue_move_details: Varsayılan olarak açık.
-qol: Kullanım kolaylığı
+qol: Yaşam kalitesi
 tags.behavior: Davranış
 tags.bugfixes: Hata düzeltmeleri

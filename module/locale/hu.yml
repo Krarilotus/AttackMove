@@ -1,10 +1,10 @@
-alt: 'Alt+kattintás: mozgás az egységre'
-alt_details: Alapértelmezésben be van kapcsolva.
-always: Shift-útvonal javítása
-always_details: Alapértelmezésben be van kapcsolva.
+alt: 'Alt+kattintás: mozgás egységek helyére'
+alt_details: Alapértelmezés szerint bekapcsolva.
+always: Shift-útpontok javítása
+always_details: Alapértelmezés szerint bekapcsolva.
 bugfixes: Hibajavítások
-continue_move: Új útvonalpontnál maradjon a jelenlegi cél
-continue_move_details: Alapértelmezésben be van kapcsolva.
+continue_move: Jelenlegi cél megtartása útpontok hozzáadásakor
+continue_move_details: Alapértelmezés szerint bekapcsolva.
 qol: Kényelmi funkciók
 tags.behavior: Viselkedés
 tags.bugfixes: Hibajavítások

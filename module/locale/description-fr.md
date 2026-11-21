@@ -1,3 +1,3 @@
 # Attack Move
 
-Corrige les étapes avec Maj pour que les troupes suivent leur route. Alt+clic permet aussi de rejoindre la position d'une autre unité.
+Corrige les points de passage avec Maj+clic pour que les troupes suivent leur itinéraire de façon fiable. Alt+clic permet aussi de déplacer des troupes sur la position d'une autre unité.
