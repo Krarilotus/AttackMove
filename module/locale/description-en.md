@@ -1,3 +1,3 @@
 # Attack Move
 
-Repairs Shift-click waypoints so troops follow their route reliably. Also lets Alt+click move troops onto another unit's position.
+Makes the game's hidden "attack move" reliable and lets you move onto troops with Alt. Every part can be switched off in the settings.
