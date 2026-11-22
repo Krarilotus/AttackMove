@@ -1,3 +1,3 @@
 # Attack Move
 
-Corrige les points de passage avec Maj+clic pour que les troupes suivent leur itinéraire de façon fiable. Alt+clic permet aussi de déplacer des troupes sur la position d'une autre unité.
+Rend fiable le mode caché « attaque-mouvement » du jeu et vous permet de vous déplacer sur des troupes avec Alt. Chaque partie peut être désactivée dans les paramètres.

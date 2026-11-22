@@ -1,3 +1,3 @@
 # Attack Move
 
-Corrige los puntos de ruta con Mayús para que las tropas sigan su recorrido. Alt+clic permite moverlas a la posición de otra unidad.
+Hace fiable el «ataque en movimiento» oculto del juego y te permite moverte sobre tropas con Alt. Cada parte se puede desactivar en los ajustes.

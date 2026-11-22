@@ -1,3 +1,3 @@
 # Attack Move
 
-Javítja a Shift+kattintásos útpontokat, hogy a csapatok megbízhatóan kövessék az útvonalukat. Alt+kattintással a csapatok más egységek helyére is mozgathatók.
+Megbízhatóvá teszi a játék rejtett „támadó mozgás” funkcióját, és lehetővé teszi, hogy az Alt billentyűvel csapatokra mozogj. Minden része kikapcsolható a beállításokban.

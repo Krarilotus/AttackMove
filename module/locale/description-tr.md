@@ -1,3 +1,3 @@
 # Attack Move
 
-Birliklerin rotalarını güvenilir şekilde izlemesi için Shift+tık yol noktalarını düzeltir. Ayrıca Alt+tık ile birlikleri başka bir birimin konumuna hareket ettirmenizi sağlar.
+Oyunun gizli «saldırarak hareket» özelliğini güvenilir hâle getirir ve Alt ile birliklerin üzerine hareket etmenizi sağlar. Her bölümü ayarlardan kapatılabilir.

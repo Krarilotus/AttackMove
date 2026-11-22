@@ -1,3 +1,3 @@
 # Attack Move
 
-Korrigiert Shift-Wegpunkte, damit Truppen ihrer Route zuverlässig folgen. Mit Alt+Klick können Truppen auf die Position anderer Einheiten ziehen.
+Macht die versteckte „Angriffsbewegung“ des Spiels zuverlässig und lässt dich mit Alt auf Truppen ziehen. Jeder Teil lässt sich in den Einstellungen abschalten.
