@@ -1,10 +1,7 @@
 alt: Alt+Klick bewegt Truppen auf Einheiten
-alt_details: Standardmäßig aktiviert.
 always: Shift-Wegpunkte korrigieren
-always_details: Standardmäßig aktiviert.
 bugfixes: Fehlerkorrekturen
 continue_move: Aktuelles Ziel beim Hinzufügen von Wegpunkten behalten
-continue_move_details: Standardmäßig aktiviert.
 qol: Komfortfunktionen
 tags.behavior: Verhalten
 tags.bugfixes: Fehlerkorrekturen

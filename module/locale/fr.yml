@@ -1,10 +1,7 @@
 alt: Alt+clic pour déplacer sur des unités
-alt_details: Activé par défaut.
 always: Corriger les points de passage avec Maj
-always_details: Activé par défaut.
 bugfixes: Corrections
 continue_move: Conserver la destination actuelle lors de l'ajout de points de passage
-continue_move_details: Activé par défaut.
 qol: Qualité de vie
 tags.behavior: Comportement
 tags.bugfixes: Corrections

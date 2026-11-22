@@ -1,10 +1,7 @@
 alt: Alt+щелчок перемещает на место юнитов
-alt_details: По умолчанию включено.
 always: Исправить точки маршрута с Shift
-always_details: По умолчанию включено.
 bugfixes: Исправления
 continue_move: Сохранять текущую цель при добавлении точек маршрута
-continue_move_details: По умолчанию включено.
 qol: Удобство игры
 tags.behavior: Поведение
 tags.bugfixes: Исправления

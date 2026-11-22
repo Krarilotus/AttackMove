@@ -1,7 +1,6 @@
 options:
 - url: attack-move.waypoints.always
   name: attack-move-waypoints-always
-  text: '{{always_details}}'
   display: UCP2Switch
   contents:
     type: boolean
@@ -11,7 +10,6 @@ options:
   - '{{bugfixes}}'
 - url: attack-move.waypoints.continue_move
   name: attack-move-waypoints-continue-move
-  text: '{{continue_move_details}}'
   display: UCP2Switch
   contents:
     type: boolean
@@ -21,7 +19,6 @@ options:
   - '{{qol}}'
 - url: attack-move.stacking.alt
   name: attack-move-stacking-alt
-  text: '{{alt_details}}'
   display: UCP2Switch
   contents:
     type: boolean
