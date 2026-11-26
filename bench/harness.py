@@ -9,12 +9,35 @@ from x86emu_t import Memory, CPU, MASK
 from host import fasm, ucp_source
 
 MODULE = os.environ.get('ATTACK_MOVE_MODULE', os.path.join(os.path.dirname(HERE), 'module'))
+RECOMMENDED = os.path.join(os.path.dirname(HERE), 'attack-move-recommended', 'config.yml')
 VAN_PATH = G + r'\Stronghold Crusader.exe'
 EXT_PATH = G + r'\Stronghold_Crusader_Extreme.exe'
 HEAP = 0x60000000
 STACK_TOP = 0x70100000
 SENTINEL = 0x7FFFFFF0
 _EXES = {}
+
+
+def recommended(overrides):
+    """The Recommended plugin's suggested values with `overrides` on top."""
+    import yaml
+    with open(RECOMMENDED, encoding='utf-8') as f:
+        tree = yaml.safe_load(f)['config-sparse']['modules']['attack-move']['config']
+
+    def values(node):
+        out = {}
+        for key, child in node.items():
+            if key == 'contents':
+                continue
+            value = child.get('contents', {}).get('suggested-value')
+            nested = values(child)
+            out[key] = {**value, **nested} if isinstance(value, dict) else (nested or value)
+        return out
+
+    config = values(tree)
+    for group, settings in overrides.items():
+        config[group] = {**config.get(group, {}), **settings} if isinstance(settings, dict) else settings
+    return config
 
 
 def exe(p):
@@ -90,7 +113,7 @@ class Host:
             self.m.write(sd + 9, b'\xE9\x00\x00\x00\x72\x90')
         os.chdir(G)   # io.open('ucp/modules/...') relative to the game folder
         self.mod = lua.eval(b'dofile')((MODULE + r'\init.lua').encode('mbcs'))
-        self.mod[b'enable'](self.mod, self.to_lua(config or {}))
+        self.mod[b'enable'](self.mod, self.to_lua(recommended(config or {})))
 
     def to_lua(self, value):
         if isinstance(value, dict):
