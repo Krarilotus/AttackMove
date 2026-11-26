@@ -91,6 +91,9 @@ class Host:
         c[b'itob'] = lambda v: lua.table_from(list(struct.pack('<I', int(v) & MASK)))
         c[b'getRelativeAddress'] = lambda f, t, o=0: (int(t) - int(f) + int(o)) & MASK
         g[b'core'] = c
+        g[b'VERBOSE'] = b'VERBOSE'
+        lua.execute(b"package.loaded.core = core")
+        g[b'utils'] = lua.eval(b'dofile')(os.environ['UCP_UTILS_LUA'].encode('mbcs'))
         self.aic = {}
         if aic:
             loader = lua.table()

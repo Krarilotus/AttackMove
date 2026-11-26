@@ -29,7 +29,7 @@ def run_exe(extreme, config=None, label=''):
         print('   log', line)
     shift = E.find('39 3D ? ? ? ? 0F 84 ? ? ? ? 8B 0D ? ? ? ? 3B CF A1 ? ? ? ? 74 4B 83 F8 0A 89 6C 24 2C 0F 8D')[0]
     route = E.find('66 39 9E ? ? 00 00 0F 84 ? ? ? ? 55 8B CF E8 ? ? ? ? 85 C0 0F 84 ? ? ? ? 0F BF 86 ? ? 00 00 0F BF 8E ? ? 00 00 83 C0 01 3B C1')[0]
-    ticks_at = E.find('8B 87 50 0A 00 00 8B 8F 98 09 00 00 8B 15')[0]
+    ticks_at = E.find('8B 8F 98 09 00 00 8B 15 ? ? ? ?')[0]
     shift_flag = E.u32(shift + 2)
     patrol = E.u32(shift + 0x0E)
     tribes = patrol - 0x1C
@@ -43,7 +43,7 @@ def run_exe(extreme, config=None, label=''):
     points_off = E.u32(route + 0x6C)
     size = E.u32(route + 0x61) * 4
     all_arrived = (route + 0x10 + 5 + E.i32(route + 0x11)) & 0xFFFFFFFF
-    ticks = E.u32(ticks_at + 14)
+    ticks = E.u32(ticks_at + 8)
     normal = (shift + 6 + 6 + E.i32(shift + 8)) & 0xFFFFFFFF
     extend = None
     # the "add a point" call: B9 UnitsState / E8 extendRallyPoint after the counter cap

@@ -66,6 +66,7 @@ Works in both Stronghold Crusader and Stronghold Crusader Extreme.
 
 The bench needs Python with `lupa`, `capstone`, `pefile` and `keystone-engine`, and a 32-bit
 PowerShell for fasm.dll; it reads the executables from the game folder named in `bench/shc.py`.
+Set `UCP_UTILS_LUA` to the framework 3.0.8 source file `content/ucp/code/utils.lua`.
 
 ## How it works
 
