@@ -72,9 +72,9 @@ local ROUTE_GROUP_SIZE = { 0x5F, { 0x69, 0xD2 } }    -- imul edx, edx, size / 4
 local ROUTE_POINTS = { 0x68, { 0x0F, 0xBF, 0x94, 0x8F } }
 local GROUP_UID = 0x34
 
--- The game tick counter (the stance search's frequency test in updateUnits).
-local AOB_TICKS = "8B 87 50 0A 00 00 8B 8F 98 09 00 00 8B 15"
-local TICKS_OPERAND = 0x0E
+-- The game tick counter: mov ecx, [edi+0x998] / mov edx, [ticks] in updateUnits. The mask load
+-- before it is patched by other modules.
+local AOB_TICKS = "8B 8F 98 09 00 00 8B 15 I(? ? ? ?)"
 
 -- The two places where a click with troops selected asks for a unit of the player under the
 -- cursor: push 5 / mov ecx, UnitsState / call getUnitInHitBox.
@@ -223,6 +223,12 @@ local function scan(pattern, purpose)
   return address
 end
 
+local function tickCounter(feature)
+  local ok, _, ticks = pcall(utils.AOBExtract, AOB_TICKS)
+  if ok and ticks then return ticks end
+  log(WARNING, string.format("%s: game tick counter not found, %s stays off", MODULE_NAME, feature))
+end
+
 local function expectBytes(address, bytes, purpose)
   for index, byte in ipairs(bytes) do
     if (core.readByte(address + index - 1) & 0xFF) ~= byte then
@@ -284,7 +290,7 @@ end
 -- The changes
 ---------------------------------------------------------------------------------------
 
-local function patchWaypoints(shift, continueMove)
+local function patchWaypoints(shift, continueMove, ticks)
   local route = scan(AOB_ROUTE, "where a group walks its route")
   local patrol = readOperand(shift, SHIFT_PATROL, "the patrol button")
   local tribes = patrol - TRIBES_PATROL
@@ -307,7 +313,7 @@ local function patchWaypoints(shift, continueMove)
     GIVE_MOVE = readCallTarget(shift, SHIFT_GIVE_MOVE, "the move order"),
     MOUSE_X = readOperand(shift, SHIFT_MOUSE_X, "the clicked tile"),
     MOUSE_Y = readOperand(shift, SHIFT_MOUSE_Y, "the clicked tile"),
-    TICKS = core.readInteger(scan(AOB_TICKS, "the tick counter") + TICKS_OPERAND),
+    TICKS = ticks,
     PENDING_TICKS = PENDING_TICKS,
     LAST = core.allocate(0x18, true),
     CONTINUE_ON = core.allocate(4, true),
@@ -364,9 +370,10 @@ local function enable(self, config)
   if not waypoints and not alt then
     return
   end
+  local ticks = waypoints and tickCounter("waypoints")
   local shift = scan(AOB_SHIFT, "the Shift-click order")
-  if waypoints then
-    patchWaypoints(shift, setting(config, "waypoints", "continue_move"))
+  if ticks then
+    patchWaypoints(shift, setting(config, "waypoints", "continue_move"), ticks)
   end
   if alt then
     patchAltStacking(shift)
