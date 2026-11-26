@@ -1,7 +1,7 @@
-<config><files>
+<module><files>
   <file src="definition.yml" />
   <file src="init.lua" />
   <file src="locale" />
   <file src="options.yml" />
   <file src="CREDITS.md" />
-</files></config>
+</files></module>

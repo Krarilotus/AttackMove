@@ -154,11 +154,9 @@ mov dword [RALLY_COUNT],2
 mov eax,[TICKS]
 mov [LAST+8],eax
 mov dword [LAST+0x14],2
-inc dword [DIAG+8]
 jmp finish
 fresh:
 mov dword [RALLY_COUNT],1
-inc dword [DIAG+4]
 started:
 mov ecx,[TRIBES]
 mov [LAST],ecx
@@ -173,7 +171,6 @@ mov eax,[MOUSE_Y]
 mov [LAST+0x10],eax
 mov dword [LAST+0x14],2
 finish:
-inc dword [DIAG]
 popad
 ORIGINAL
 jmp RESUME
@@ -314,7 +311,6 @@ local function patchWaypoints(shift, continueMove)
     PENDING_TICKS = PENDING_TICKS,
     LAST = core.allocate(0x18, true),
     CONTINUE_ON = core.allocate(4, true),
-    DIAG = core.allocate(16, true),
   }
   core.writeByte(values.CONTINUE_ON, continueMove and 1 or 0)
 
@@ -363,11 +359,16 @@ end
 
 local function enable(self, config)
   config = config or {}
+  local waypoints = setting(config, "waypoints", "always")
+  local alt = setting(config, "stacking", "alt")
+  if not waypoints and not alt then
+    return
+  end
   local shift = scan(AOB_SHIFT, "the Shift-click order")
-  if setting(config, "waypoints", "always") then
+  if waypoints then
     patchWaypoints(shift, setting(config, "waypoints", "continue_move"))
   end
-  if setting(config, "stacking", "alt") then
+  if alt then
     patchAltStacking(shift)
   end
 end
