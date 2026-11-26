@@ -74,7 +74,7 @@ local GROUP_UID = 0x34
 
 -- The game tick counter: mov ecx, [edi+0x998] / mov edx, [ticks] in updateUnits. The mask load
 -- before it is patched by other modules.
-local AOB_TICKS = "8B 8F 98 09 00 00 8B 15 I(? ? ? ?)"
+local AOB_TICKS = "8B 8F 98 09 00 00 8B 15 ? ? ? ?"
 
 -- The two places where a click with troops selected asks for a unit of the player under the
 -- cursor: push 5 / mov ecx, UnitsState / call getUnitInHitBox.
@@ -224,9 +224,9 @@ local function scan(pattern, purpose)
 end
 
 local function tickCounter(feature)
-  local ok, _, ticks = pcall(utils.AOBExtract, AOB_TICKS)
-  if ok and ticks then return ticks end
-  log(WARNING, string.format("%s: game tick counter not found, %s stays off", MODULE_NAME, feature))
+  local site, problem = core.AOBScanUnique(AOB_TICKS)
+  if site then return core.readInteger(site + 8) end
+  log(WARNING, string.format("%s: game tick counter %s, %s stays off", MODULE_NAME, problem, feature))
 end
 
 local function expectBytes(address, bytes, purpose)
