@@ -7,13 +7,12 @@ config-sparse:
         waypoints:
           always:
             contents:
-              value: true
+              suggested-value: true
           continue_move:
             contents:
-              value: true
+              suggested-value: true
         stacking:
           alt:
             contents:
-              value: true
+              suggested-value: true
   plugins: {}
-  load-order: []

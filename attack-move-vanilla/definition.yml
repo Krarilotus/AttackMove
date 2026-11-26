@@ -1,0 +1,20 @@
+name: attack-move-vanilla
+display-name: Attack Move Vanilla
+author: Monsterfish
+version: 1.0.0
+type: plugin
+game:
+- SHC==1.41
+- SHCE==1.41
+family:
+- name: attack-move
+  root: true
+  members:
+  - attack-move-recommended
+  default: attack-move-recommended
+meta:
+  version: 1.0.0
+dependencies:
+  framework: '>=3.0.7'
+  frontend: '>=1.0.17 <2.0.0'
+  attack-move: ^1.0.3

@@ -81,3 +81,10 @@ PowerShell for fasm.dll; it reads the executables from the game folder named in 
   questions get "none", so the click is a move order.
 
 Every address is found by pattern scan or read from the instruction that uses it.
+
+## Vanilla and Recommended
+
+Every option of the module is off by default, so the module alone plays like the original
+game. Two plugins in this repository form the Attack Move family in the launcher:
+`attack-move-recommended` (offered first) switches on the recommended settings, `attack-move-vanilla`
+keeps everything off. Plugins that build on the module set the options they need themselves.

@@ -26,8 +26,8 @@
 local MODULE_NAME = "attack-move"
 
 local DEFAULTS = {
-  waypoints = { always = true, continue_move = true },
-  stacking = { alt = true },
+  waypoints = { always = false, continue_move = false },
+  stacking = { alt = false },
 }
 
 -- How long after a route was ordered it still counts as "ordered, not started yet", in game
