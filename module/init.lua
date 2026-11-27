@@ -216,18 +216,9 @@ jmp GET_UNIT
 ---------------------------------------------------------------------------------------
 
 local function scan(pattern, purpose)
-  local ok, address = pcall(core.AOBScan, pattern)
-  if not ok or address == nil then
-    error(MODULE_NAME .. ": could not find " .. purpose)
-  end
+  local address, reason = core.AOBScanUnique(pattern)
+  if not address then error(purpose .. " " .. reason, 0) end
   return address
-end
-
-local function tickCounter(feature)
-  local site, problem = core.AOBScanUnique(AOB_TICKS)
-  if site then return core.readInteger(site + 8) end
-  log(ERROR, "Attack-move waypoints are off. The game tick counter could not be read.")
-  log(WARNING, string.format("%s: game tick counter %s, %s stays off", MODULE_NAME, problem, feature))
 end
 
 local function expectBytes(address, bytes, purpose)
@@ -282,7 +273,9 @@ end
 local function setting(config, group, name)
   local section = config[group]
   if type(section) == "table" and section[name] ~= nil then
-    return section[name]
+    local value = section[name]
+    if type(value) == "boolean" then return value end
+    log(ERROR, "Attack Move: " .. name .. " must be on or off. Using the default.")
   end
   return DEFAULTS[group][name]
 end
@@ -333,8 +326,6 @@ local function patchWaypoints(shift, continueMove, ticks)
   local record = assemble(NORMAL_MOVE, values, originalBytes(normalMove, NORMAL_MOVE_HOOK_SIZE))
   jumpTo(site, stub, SHIFT_HOOK_SIZE)
   jumpTo(normalMove, record, NORMAL_MOVE_HOOK_SIZE)
-  log(INFO, string.format("%s: Shift waypoints work at any time (groups 0x%X, size 0x%X, route flag "
-    .. "+0x%X)", MODULE_NAME, tribes, groupSize, values.ROUTE_FLAG))
 end
 
 local function patchAltStacking(shift)
@@ -365,19 +356,38 @@ local function patchAltStacking(shift)
 end
 
 local function enable(self, config)
-  config = config or {}
+  config = type(config) == "table" and config or {}
   local waypoints = setting(config, "waypoints", "always")
   local alt = setting(config, "stacking", "alt")
   if not waypoints and not alt then
     return
   end
-  local ticks = waypoints and tickCounter("waypoints")
-  local shift = scan(AOB_SHIFT, "the Shift-click order")
+  local ticks
+  if waypoints then
+    local site, reason = core.AOBScanUnique(AOB_TICKS)
+    if site then
+      ticks = core.readInteger(site + 8)
+    else
+      log(ERROR, "Attack-move waypoints are off. The game tick counter was " .. reason .. ".")
+    end
+  end
+  if not ticks and not alt then return end
+
+  local function install(feature, fn, ...)
+    local ok, message = pcall(fn, ...)
+    if not ok then log(ERROR, feature .. " is off. " .. tostring(message)) end
+  end
+  local shift, reason = core.AOBScanUnique(AOB_SHIFT)
+  if not shift then
+    if ticks then log(ERROR, "Attack-move waypoints are off. The Shift-click order was " .. reason .. ".") end
+    if alt then log(ERROR, "Alt stacking is off. The Shift-click order was " .. reason .. ".") end
+    return
+  end
   if ticks then
-    patchWaypoints(shift, setting(config, "waypoints", "continue_move"), ticks)
+    install("Attack-move waypoints", patchWaypoints, shift, setting(config, "waypoints", "continue_move"), ticks)
   end
   if alt then
-    patchAltStacking(shift)
+    install("Alt stacking", patchAltStacking, shift)
   end
 end
 
