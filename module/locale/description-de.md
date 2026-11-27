@@ -1,3 +1,3 @@
 # Attack Move
 
-Macht die versteckte „Angriffsbewegung“ des Spiels zuverlässig und lässt dich mit Alt auf Truppen ziehen. Jeder Teil lässt sich in den Einstellungen abschalten.
+Wähle Truppen aus und klicke mit gedrückter Umschalttaste auf die Karte, um eine Route zu starten oder zu verlängern. Sie behalten unterwegs ihre Kampfhaltung bei. Halte Alt beim Klick auf eine Einheit gedrückt, um deine Truppen dorthin zu bewegen.

@@ -1,3 +1,3 @@
 # Attack Move
 
-Oyunun gizli «saldırarak hareket» özelliğini güvenilir hâle getirir ve Alt ile birliklerin üzerine hareket etmenizi sağlar. Her bölümü ayarlardan kapatılabilir.
+Birlikleri seçip haritada Shift+tıklama yaparak rotalarını başlatın veya uzatın. Yol boyunca savaş duruşlarını korurlar. Bir birime tıklarken Alt tuşunu basılı tutarak birliklerinizi o noktaya gönderin.

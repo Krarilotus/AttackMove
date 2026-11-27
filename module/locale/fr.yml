@@ -1,7 +1,7 @@
-alt: Alt+clic pour déplacer sur des unités
-always: Corriger les points de passage avec Maj
+alt: Alt+clic déplace les troupes sélectionnées vers un point occupé
+always: Corriger les points de passage avec Maj+clic
 bugfixes: Corrections de bugs
-continue_move: Conserver la destination actuelle lors de l'ajout de points de passage
+continue_move: Terminer le déplacement en cours avant les nouveaux points de passage
 qol: Qualité de vie
 tags.behavior: Comportement
 tags.bugfixes: Corrections

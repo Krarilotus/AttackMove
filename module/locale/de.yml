@@ -1,7 +1,7 @@
-alt: Alt+Klick bewegt Truppen auf Einheiten
-always: Shift-Wegpunkte korrigieren
+alt: Alt-Klick bewegt ausgewählte Truppen auf ein besetztes Feld
+always: Shift-Klick-Wegpunkte korrigieren
 bugfixes: Fehlerkorrekturen
-continue_move: Aktuelles Ziel beim Hinzufügen von Wegpunkten behalten
+continue_move: Aktuelle Bewegung vor neuen Wegpunkten beenden
 qol: Komfort
 tags.behavior: Verhalten
 tags.bugfixes: Fehlerkorrekturen

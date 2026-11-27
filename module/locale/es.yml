@@ -1,7 +1,7 @@
-alt: Alt+clic para moverse sobre unidades
-always: Corregir puntos de ruta con Mayús
+alt: Alt+clic mueve las tropas seleccionadas a un punto ocupado
+always: Corregir puntos de ruta con Shift+clic
 bugfixes: Correcciones de errores
-continue_move: Mantener el destino actual al añadir puntos de ruta
+continue_move: Terminar el movimiento actual antes de nuevos puntos de ruta
 qol: Comodidad de juego
 tags.behavior: Comportamiento
 tags.bugfixes: Correcciones

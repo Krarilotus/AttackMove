@@ -1,7 +1,7 @@
-alt: 'Alt+kattintás: mozgás egységek helyére'
-always: Shift-útpontok javítása
+alt: Alt+kattintás a kijelölt csapatokat foglalt helyre mozgatja
+always: Shift+kattintásos útpontok javítása
 bugfixes: Hibajavítások
-continue_move: Jelenlegi cél megtartása útpontok hozzáadásakor
+continue_move: Aktuális mozgás befejezése az új útpontok előtt
 qol: Kényelmi funkciók
 tags.behavior: Viselkedés
 tags.bugfixes: Hibajavítások

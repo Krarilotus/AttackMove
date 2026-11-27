@@ -1,3 +1,3 @@
 # Attack Move
 
-Rend fiable le mode caché « attaque-mouvement » du jeu et vous permet de vous déplacer sur des troupes avec Alt. Chaque partie peut être désactivée dans les paramètres.
+Sélectionnez des troupes et faites Maj+clic sur la carte pour lancer ou prolonger leur itinéraire. Elles conservent leur posture de combat en chemin. Maintenez Alt en cliquant sur une unité pour déplacer vos troupes à cet endroit.
