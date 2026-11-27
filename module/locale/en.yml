@@ -1,7 +1,7 @@
-alt: Alt+click moves onto units
-always: Repair Shift waypoints
+alt: Alt-click moves selected troops to an occupied spot
+always: Fix Shift-click waypoints
 bugfixes: Bugfixes
-continue_move: Keep the current destination when adding waypoints
+continue_move: Finish the current move before new waypoints
 qol: Quality of Life
 tags.behavior: Behavior
 tags.bugfixes: Bug fixes

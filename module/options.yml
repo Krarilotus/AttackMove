@@ -8,15 +8,14 @@ options:
   header: '{{always}}'
   category:
   - '{{bugfixes}}'
-- url: attack-move.waypoints.continue_move
-  name: attack-move-waypoints-continue-move
-  display: UCP2Switch
-  contents:
-    type: boolean
-    value: false
-  header: '{{continue_move}}'
-  category:
-  - '{{qol}}'
+  children:
+  - url: attack-move.waypoints.continue_move
+    name: attack-move-waypoints-continue-move
+    display: UCP2Switch
+    contents:
+      type: boolean
+      value: false
+    header: '{{continue_move}}'
 - url: attack-move.stacking.alt
   name: attack-move-stacking-alt
   display: UCP2Switch

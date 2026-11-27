@@ -2,6 +2,6 @@ alt: Alt+点击移动到单位位置
 always: 修复 Shift 路径点
 bugfixes: 错误修复
 continue_move: 添加路径点时保留当前目的地
-qol: 体验优化
+qol: 便利性改进
 tags.behavior: 行为
 tags.bugfixes: 错误修复
