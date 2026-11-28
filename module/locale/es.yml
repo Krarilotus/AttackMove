@@ -5,3 +5,5 @@ continue_move: Terminar el movimiento actual antes de nuevos puntos de ruta
 qol: Comodidad de juego
 tags.behavior: Comportamiento
 tags.bugfixes: Correcciones
+cat_unit_controls: Control de unidades
+cat_unit_orders: Órdenes y objetivos de unidades

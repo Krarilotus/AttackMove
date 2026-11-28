@@ -8,6 +8,7 @@ options:
   header: '{{always}}'
   category:
   - '{{bugfixes}}'
+  - '{{cat_unit_orders}}'
   children:
   - url: attack-move.waypoints.continue_move
     name: attack-move-waypoints-continue-move
@@ -24,6 +25,7 @@ options:
     value: false
   category:
   - '{{qol}}'
+  - '{{cat_unit_controls}}'
   header: '{{alt}}'
 meta:
   version: 1.0.0

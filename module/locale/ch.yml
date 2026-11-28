@@ -5,3 +5,5 @@ continue_move: 先完成当前移动再走新路径点
 qol: 便利性改进
 tags.behavior: 行为
 tags.bugfixes: 错误修复
+cat_unit_controls: 部队操控
+cat_unit_orders: 部队指令与目标

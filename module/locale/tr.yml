@@ -5,3 +5,5 @@ continue_move: Yeni yol noktalarından önce mevcut hareketi tamamla
 qol: Kullanım kolaylığı
 tags.behavior: Davranış
 tags.bugfixes: Hata düzeltmeleri
+cat_unit_controls: Birlik kontrolleri
+cat_unit_orders: Birlik emirleri ve hedefleme

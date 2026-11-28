@@ -5,3 +5,5 @@ continue_move: Finish the current move before new waypoints
 qol: Quality of Life
 tags.behavior: Behavior
 tags.bugfixes: Bug fixes
+cat_unit_controls: Unit controls
+cat_unit_orders: Unit orders and targeting

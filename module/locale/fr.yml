@@ -5,3 +5,5 @@ continue_move: Terminer le déplacement en cours avant les nouveaux points de pa
 qol: Qualité de vie
 tags.behavior: Comportement
 tags.bugfixes: Corrections
+cat_unit_controls: Contrôle des unités
+cat_unit_orders: Ordres et ciblage des unités
