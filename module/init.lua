@@ -216,8 +216,8 @@ jmp GET_UNIT
 ---------------------------------------------------------------------------------------
 
 local function scan(pattern, purpose)
-  local address, reason = core.AOBScanUnique(pattern)
-  if not address then error(purpose .. " " .. reason, 0) end
+  local found, address = pcall(core.AOBScan, pattern)
+  if not found then error(purpose .. " not found", 0) end
   return address
 end
 
@@ -364,11 +364,11 @@ local function enable(self, config)
   end
   local ticks
   if waypoints then
-    local site, reason = core.AOBScanUnique(AOB_TICKS)
-    if site then
+    local found, site = pcall(core.AOBScan, AOB_TICKS)
+    if found then
       ticks = core.readInteger(site + 8)
     else
-      log(ERROR, "Attack-move waypoints are off. The game tick counter was " .. reason .. ".")
+      log(ERROR, "Attack-move waypoints are off. The game tick counter was not found.")
     end
   end
   if not ticks and not alt then return end
@@ -377,10 +377,10 @@ local function enable(self, config)
     local ok, message = pcall(fn, ...)
     if not ok then log(ERROR, feature .. " is off. " .. tostring(message)) end
   end
-  local shift, reason = core.AOBScanUnique(AOB_SHIFT)
-  if not shift then
-    if ticks then log(ERROR, "Attack-move waypoints are off. The Shift-click order was " .. reason .. ".") end
-    if alt then log(ERROR, "Alt stacking is off. The Shift-click order was " .. reason .. ".") end
+  local found, shift = pcall(core.AOBScan, AOB_SHIFT)
+  if not found then
+    if ticks then log(ERROR, "Attack-move waypoints are off. The Shift-click order was not found.") end
+    if alt then log(ERROR, "Alt stacking is off. The Shift-click order was not found.") end
     return
   end
   if ticks then
